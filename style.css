@@ -3,10 +3,16 @@
     padding: 0;
 }
 
-header h1{
+/* Body */
+body{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+/* header h1{
     line-height: 200%;
     padding-top: 16px;
-}
+} */
 
 /* Navigation */
 ul{
