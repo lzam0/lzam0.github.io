@@ -25,16 +25,8 @@ header h1{
 /* Navigation */
 ul{
     list-style-type: none;
-}
-
-nav
-{
-    height: 100px;
-    padding: 8px;
-    text-align: center;
-}
-
-.nav{
-    display: inline-block;
-    padding: 24px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
 }
