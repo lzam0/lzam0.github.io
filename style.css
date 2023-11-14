@@ -17,7 +17,6 @@ body{
 }
 
 /* Navigation */
-
 ul{
   list-style-type: none;
 }
@@ -114,28 +113,62 @@ section{
   text-align: center;
 }
 
-.section__text__animate:before{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: red;
-  border-left: 2px solid white;
-  animation: aniamte 4s steps(12) infinite;
+/* About */
+#about{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
-@keyframes animate {
-  40%, 60%{
-    left: 100%
-  }
-  100%{
-    left: 0%;
-  }
+
+.about-text{
+  margin-left: auto;
+  margin-right: auto;
+  padding: auto 0;
+  width: 50rem;
+  line-height: 2.5rem;
+}
+
+.about-text a{
+  font-weight: bold;
+}
+.about-text a:hover{
+  color:grey;
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+  text-decoration-color: rgb(181,181,181);
+}
+
+/* Skill */
+
+#skill{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.skill-container{
+  width: 60rem;
+}
+
+.my-skill{
+  font-size: large;
+  font-weight: 900;
+
+  color: white;
+  margin: 0;
+  display:inline-block;
+
+  padding: 1rem;
+  margin: 0.5rem auto;
+  border: white 0.1rem solid;
+  border-radius: 2rem;
+}
+
+.my-skill:hover{
+  color: grey;
+  background-color: white;
 }
 
 /* Contact */
-
 #contact {
   display: flex;
   justify-content: center;
@@ -173,10 +206,6 @@ section{
 
 .email-icon{
   height: 4rem;
-}
-
-footer p {
-  text-align: center;
 }
 
 /* Buttons */
@@ -233,6 +262,10 @@ footer p {
 footer {
   height: 26vh;
   margin: 0 1rem;
+}
+
+footer p {
+  text-align: center;
 }
 
 footer a:hover{
