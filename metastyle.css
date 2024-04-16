@@ -112,15 +112,28 @@
   
   /* Projects */
   .my-project {
-    width: 100%;
+    width: 60%;
+    margin: 0 auto 1rem;
+    padding: 1rem;
   }
 
   .my-project img {
-    margin-bottom: 2rem;
+    max-width: 100%;
     height: auto;
+  }
+
+  .project-title{
+    font-size: 1rem;
+  }
+  .project-title,
+  .project-desc{
+    font-size: small;
+    margin-left: auto;
+    margin-right: auto;
+    padding: auto 0;
   }
 }
 
 section {
-overflow: hidden;
+overflow: hidden; /* Prevent overflow from other sections */
 }
