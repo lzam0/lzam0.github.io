@@ -103,4 +103,24 @@
   .skill-container{
     width: 25rem;
   }
+  
+  .my-skill {
+    font-size: x-small;
+    padding: 0.2rem 0.5rem;
+    margin: 0.2rem;
+  }
+  
+  /* Projects */
+  .my-project {
+    width: 100%;
+  }
+
+  .my-project img {
+    margin-bottom: 2rem;
+    height: auto;
+  }
+}
+
+section {
+overflow: hidden;
 }
