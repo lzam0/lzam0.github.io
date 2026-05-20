@@ -65,7 +65,7 @@ export default function Hero() {
       {/* Right — hero photo */}
       <div className="relative lg:w-[42%] lg:min-h-screen lg:sticky lg:top-0 h-72 lg:h-auto shrink-0 overflow-hidden border-l border-black/5 dark:border-white/5">
         <Image
-          src="/images/main.PNG"
+          src="/images/main.jpg"
           alt="Leihl Zambrano — volleyball action"
           fill
           priority
