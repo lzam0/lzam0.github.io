@@ -1,0 +1,6 @@
+.claude/
+.next/
+node_modules/
+out/
+tsconfig.tsbuildinfo
+next-env.d.ts

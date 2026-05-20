@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1584" height="396" viewBox="0 0 1584 396">
+  <defs>
+    <!-- Grid — matches the subtle texture across site sections -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0,0,0,0.04)" stroke-width="0.5"/>
+    </pattern>
+
+    <!-- Right-side bloom — gives the diagonal zone subtle depth -->
+    <radialGradient id="rightBloom" cx="92%" cy="50%" r="42%">
+      <stop offset="0%" stop-color="rgba(0,0,0,0.022)"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0)"/>
+    </radialGradient>
+
+    <!-- Fonts: Bebas Neue + Inter — exact match to tailwind.config.ts fontFamily -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Inter:wght@400;700&amp;display=swap');
+      .f-bebas { font-family: 'Bebas Neue', 'Impact', 'Arial Black', sans-serif; }
+      .f-inter  { font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- ─── Base white — bg-white in layout.tsx ─── -->
+  <rect width="1584" height="396" fill="#FFFFFF"/>
+  <rect width="1584" height="396" fill="url(#grid)"/>
+  <rect width="1584" height="396" fill="url(#rightBloom)"/>
+
+  <!-- ════════════════════════════════
+       DIAGONAL GEOMETRY — sporty motion
+       monochrome only, matching site palette
+  ═════════════════════════════════════ -->
+
+  <!-- Angular fill block — right 32%, very faint -->
+  <polygon points="1082,0 1584,0 1584,396 1202,396"
+           fill="rgba(0,0,0,0.018)"/>
+
+  <!-- Primary diagonal cut — rgba(0,0,0,0.10) -->
+  <line x1="1086" y1="0" x2="1206" y2="396"
+        stroke="rgba(0,0,0,0.10)" stroke-width="1"/>
+
+  <!-- Secondary — rgba(0,0,0,0.05) -->
+  <line x1="1132" y1="0" x2="1252" y2="396"
+        stroke="rgba(0,0,0,0.05)" stroke-width="0.7"/>
+
+  <!-- Tertiary — rgba(0,0,0,0.03) -->
+  <line x1="1040" y1="0" x2="1160" y2="396"
+        stroke="rgba(0,0,0,0.03)" stroke-width="0.7"/>
+
+  <!-- Horizontal speed lines — fanning across right half -->
+  <line x1="820" y1="148" x2="1562" y2="148" stroke="rgba(0,0,0,0.05)"  stroke-width="0.6"/>
+  <line x1="840" y1="168" x2="1575" y2="168" stroke="rgba(0,0,0,0.035)" stroke-width="0.5"/>
+  <line x1="800" y1="188" x2="1570" y2="188" stroke="rgba(0,0,0,0.065)" stroke-width="0.7"/>
+  <line x1="830" y1="208" x2="1565" y2="208" stroke="rgba(0,0,0,0.035)" stroke-width="0.5"/>
+  <line x1="820" y1="228" x2="1562" y2="228" stroke="rgba(0,0,0,0.05)"  stroke-width="0.6"/>
+  <line x1="845" y1="248" x2="1578" y2="248" stroke="rgba(0,0,0,0.035)" stroke-width="0.5"/>
+  <line x1="825" y1="268" x2="1566" y2="268" stroke="rgba(0,0,0,0.05)"  stroke-width="0.6"/>
+
+  <!-- ════════════════════════════════
+       STRUCTURAL RULES
+       matches border-black/5 → border-black/10 across sections
+  ═════════════════════════════════════ -->
+
+  <!-- Top border -->
+  <rect x="0" y="0" width="1584" height="1" fill="rgba(0,0,0,0.08)"/>
+  <!-- Bottom border -->
+  <rect x="0" y="395" width="1584" height="1" fill="rgba(0,0,0,0.08)"/>
+
+  <!-- Left vertical rule with endpoint dots — mirrors hero left-rail -->
+  <rect x="72" y="74" width="1" height="260" fill="rgba(0,0,0,0.10)"/>
+  <circle cx="72" cy="74"  r="2.5" fill="rgba(0,0,0,0.45)"/>
+  <circle cx="72" cy="334" r="2.5" fill="rgba(0,0,0,0.45)"/>
+
+  <!-- ════════════════════════════════
+       LZ WATERMARK
+       exact match: text-black/[0.03] in Hero.tsx
+       anchored bottom-left, caps partially clip off-canvas
+  ═════════════════════════════════════ -->
+  <text x="-38" y="558" class="f-bebas"
+        font-size="558"
+        fill="rgba(0,0,0,0.028)"
+        letter-spacing="-10"
+        dominant-baseline="auto">LZ</text>
+
+  <!-- ════════════════════════════════
+       TYPOGRAPHY
+  ═════════════════════════════════════ -->
+
+  <!-- Eyebrow label
+       matches: font-inter text-xs tracking-[0.35em] text-black/30 mb-4 -->
+  <text x="96" y="94" class="f-inter"
+        font-size="11" font-weight="700"
+        fill="rgba(0,0,0,0.30)"
+        letter-spacing="4.5">PORTFOLIO — 2026</text>
+
+  <!-- ─── Quote — hero element ───
+       Bebas Neue, two lines, tight leading (1.0× line height)
+       Kobe Bryant: leadership, inspiration, bridging sport and craft -->
+  <text x="88" y="206" class="f-bebas"
+        font-size="105"
+        fill="#000000"
+        letter-spacing="1.5">THE MOST IMPORTANT THING</text>
+
+  <text x="88" y="311" class="f-bebas"
+        font-size="105"
+        fill="#000000"
+        letter-spacing="1.5">IS TO TRY AND INSPIRE.</text>
+
+  <!-- ─── Name ───
+       Smaller — like footer in Contact.tsx: font-bebas tracking-[0.2em] text-black/22
+       Elevated slightly here at black/45 so it reads clearly -->
+  <text x="96" y="354" class="f-bebas"
+        font-size="40"
+        fill="rgba(0,0,0,0.45)"
+        letter-spacing="2.5">LEIHL ZAMBRANO</text>
+
+  <!-- ─── Attribution + tagline — single compact footer row ───
+       matches: font-inter text-xs tracking-[0.35em] text-black/30 -->
+  <text x="96" y="378" class="f-inter"
+        font-size="10" font-weight="700"
+        fill="rgba(0,0,0,0.22)"
+        letter-spacing="3">— KOBE BRYANT</text>
+
+  <text x="234" y="378" class="f-inter"
+        font-size="10"
+        fill="rgba(0,0,0,0.12)"
+        letter-spacing="1">·</text>
+
+  <text x="248" y="378" class="f-inter"
+        font-size="10" font-weight="700"
+        fill="rgba(0,0,0,0.22)"
+        letter-spacing="3">CS STUDENT — ATHLETE — BUILDER</text>
+
+</svg>
