@@ -4,3 +4,4 @@ node_modules/
 out/
 tsconfig.tsbuildinfo
 next-env.d.ts
+.playwright-mcp/

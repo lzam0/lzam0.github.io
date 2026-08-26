@@ -1,21 +1,15 @@
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import About from "@/components/About";
-import GalleryStrip from "@/components/GalleryStrip";
-import Skills from "@/components/Skills";
+import Profile from "@/components/Profile";
+import LinkStack from "@/components/LinkStack";
 import Projects from "@/components/Projects";
-import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main>
-      <Navbar />
-      <Hero />
-      <About />
-      <GalleryStrip />
-      <Skills />
+    <main className="min-h-screen bg-white flex flex-col">
+      <Profile />
+      <LinkStack />
       <Projects />
-      <Contact />
+      <Footer />
     </main>
   );
 }

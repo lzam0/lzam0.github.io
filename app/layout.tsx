@@ -14,8 +14,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Leihl Zambrano — Portfolio",
-  description: "CS Student. Athlete. Builder.",
+  title: "Leihl Zambrano — builtbyleihl",
+  description: "Leihl Zambrano. Builder. Find me across the internet.",
 };
 
 export default function RootLayout({
@@ -25,16 +25,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <head>
-        {/* Prevent flash of wrong theme on load */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){var t=localStorage.getItem('theme');if(t==='dark'){document.documentElement.classList.add('dark')}})()`,
-          }}
-        />
-      </head>
       <body
-        className={`${bebasNeue.variable} ${inter.variable} bg-white dark:bg-black text-black dark:text-white font-inter antialiased transition-colors duration-300`}
+        className={`${bebasNeue.variable} ${inter.variable} bg-white text-black font-inter antialiased`}
       >
         {children}
       </body>

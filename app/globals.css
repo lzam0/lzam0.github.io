@@ -1,12 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to   { transform: translateX(var(--marquee-end, -50%)); }
-}
-
-.marquee-track:hover {
-  animation-play-state: paused;
-}
