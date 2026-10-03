@@ -21,7 +21,7 @@ export default function Header() {
 
         <nav className="flex items-center gap-1 sm:gap-2">
           {nav.map(({ label, href }) => {
-            const active = pathname === href;
+            const active = (pathname.replace(/\/$/, "") || "/") === href;
             return (
               <Link
                 key={label}
