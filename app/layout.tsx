@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, Inter } from "next/font/google";
+import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import Splash from "@/components/Splash";
 import "./globals.css";
 
-const bebasNeue = Bebas_Neue({
-  weight: "400",
+const display = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  variable: "--font-bebas",
+  variable: "--font-display",
 });
 
 const inter = Inter({
@@ -15,7 +17,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Leihl Zambrano — builtbyleihl",
-  description: "Leihl Zambrano. Builder. Find me across the internet.",
+  description: "Leihl Zambrano. Computer Science graduate (UEA, Class of 2026) looking for software roles.",
 };
 
 export default function RootLayout({
@@ -24,11 +26,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" data-scroll-behavior="smooth">
       <body
-        className={`${bebasNeue.variable} ${inter.variable} bg-white text-black font-inter antialiased`}
+        className={`${display.variable} ${inter.variable} bg-white text-ink font-inter antialiased`}
       >
+        <noscript>
+          <style>{`.reveal{opacity:1!important}`}</style>
+        </noscript>
+        <Splash />
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

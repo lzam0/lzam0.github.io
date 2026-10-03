@@ -1,3 +1,71 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Intro splash: covers the first paint, then fades away. CSS-only so it runs before hydration. */
+@keyframes splash-out {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes splash-bar {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+@keyframes splash-pop {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.splash {
+  animation: splash-out 0.45s ease 0.9s forwards;
+}
+.splash-mark {
+  animation: splash-pop 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.splash-bar {
+  transform-origin: left;
+  animation: splash-bar 0.85s cubic-bezier(0.6, 0, 0.3, 1) both;
+}
+
+/* Scroll reveal. --d staggers siblings; the first load waits for the splash. */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.reveal {
+  opacity: 0;
+}
+.reveal.is-visible {
+  animation: fade-up 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) var(--d, 0ms) both;
+}
+html:not([data-loaded]) .reveal.is-visible {
+  animation-delay: calc(var(--d, 0ms) + 1000ms);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .splash {
+    display: none;
+  }
+  .reveal,
+  .reveal.is-visible {
+    opacity: 1;
+    animation: none;
+  }
+}

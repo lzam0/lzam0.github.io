@@ -1,15 +1,11 @@
-import Profile from "@/components/Profile";
-import LinkStack from "@/components/LinkStack";
+import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
-import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white flex flex-col">
-      <Profile />
-      <LinkStack />
+    <main>
+      <Hero />
       <Projects />
-      <Footer />
     </main>
   );
 }
