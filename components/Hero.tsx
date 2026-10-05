@@ -60,11 +60,11 @@ export default function Hero() {
           />
           <div className="relative aspect-square overflow-hidden rounded-[2rem] border-4 border-white shadow-xl shadow-sky-200/50">
             <Image
-              src="/images/IMG_5133_Original.jpg"
+              src="/images/hero.jpg"
               alt="Leihl Zambrano"
               fill
               priority
-              className="object-cover object-[50%_18%] scale-150 origin-[56%_22%]"
+              className="object-cover"
               sizes="(max-width: 768px) 90vw, 384px"
             />
           </div>
